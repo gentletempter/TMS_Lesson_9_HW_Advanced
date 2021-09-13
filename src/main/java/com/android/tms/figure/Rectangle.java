@@ -1,13 +1,13 @@
 package com.android.tms.figure;
 
 import com.android.tms.exception.figureException;
-import org.apache.log4j.Logger;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 public class Rectangle extends Figure {
     private float a;
     private float b;
     private final String exceptionMessage = "The rectangle does not exist";
-    private static final Logger log = Logger.getLogger(Rectangle.class);
 
     public Rectangle(float a, float b) {
         super(a, b);

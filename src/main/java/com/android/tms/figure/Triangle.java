@@ -1,15 +1,15 @@
 package com.android.tms.figure;
 
 import com.android.tms.exception.figureException;
-import org.apache.log4j.Logger;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 public class Triangle extends Figure {
 
     private float a;
     private float b;
     private float c;
     private final String exceptionMessage = "The triangle does not exist";
-    private static final Logger log = Logger.getLogger(Triangle.class);
 
     public Triangle(float a, float b, float c) {
         super(a, b, c);

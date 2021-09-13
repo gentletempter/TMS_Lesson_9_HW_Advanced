@@ -1,10 +1,10 @@
 package com.android.tms.figure;
 
 import com.android.tms.exception.figureException;
-import org.apache.log4j.Logger;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 public class Circle extends Figure {
-    private static final Logger log = Logger.getLogger(Circle.class);
     private float r;
     private final String exceptionMessage = "The circle does not exist";
 
