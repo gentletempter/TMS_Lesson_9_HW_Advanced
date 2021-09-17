@@ -1,6 +1,6 @@
 package com.android.tms.figure;
 
-import com.android.tms.exception.figureException;
+import com.android.tms.exception.FigureException;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
@@ -23,12 +23,12 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public float getPerimeter() throws figureException {
+    public float getPerimeter() throws FigureException {
         if (checkTriangle(a, b, c)) {
             log.info("Calculating perimeter");
             return a + b + c;
         } else {
-            throw new figureException(exceptionMessage, this.getClass().getSimpleName());
+            throw new FigureException(exceptionMessage, this.getClass().getSimpleName());
         }
     }
 
@@ -36,12 +36,12 @@ public class Triangle extends Figure {
      * Using Geron's formula
      */
     @Override
-    public float getArea() throws figureException {
+    public float getArea() throws FigureException {
         if (checkTriangle(a, b, c)) {
             log.info("Calculating area");
             return (float) ((Math.sqrt((a + b + c) * (a + b - c) * (a - b + c) * (b + c - a))) / 4);
         } else {
-            throw new figureException(exceptionMessage, this.getClass().getSimpleName());
+            throw new FigureException(exceptionMessage, this.getClass().getSimpleName());
         }
     }
 }

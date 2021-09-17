@@ -1,6 +1,6 @@
 package com.android.tms.figure;
 
-import com.android.tms.exception.figureException;
+import com.android.tms.exception.FigureException;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
@@ -20,22 +20,22 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public float getArea() throws figureException {
+    public float getArea() throws FigureException {
         if (checkRectangle(a, b)) {
             log.info("Calculating area");
             return a * b;
         } else {
-            throw new figureException(exceptionMessage, this.getClass().getSimpleName());
+            throw new FigureException(exceptionMessage, this.getClass().getSimpleName());
         }
     }
 
     @Override
-    public float getPerimeter() throws figureException {
+    public float getPerimeter() throws FigureException {
         if (checkRectangle(a, b)) {
             log.info("Calculating perimeter");
             return 2 * (a + b);
         } else {
-            throw new figureException(exceptionMessage, this.getClass().getSimpleName());
+            throw new FigureException(exceptionMessage, this.getClass().getSimpleName());
         }
     }
 }

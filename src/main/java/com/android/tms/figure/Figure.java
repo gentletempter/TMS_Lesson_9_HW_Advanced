@@ -1,6 +1,6 @@
 package com.android.tms.figure;
 
-import com.android.tms.exception.figureException;
+import com.android.tms.exception.FigureException;
 import lombok.Getter;
 
 /**
@@ -32,10 +32,10 @@ public abstract class Figure {
     /**
      * Calculation of the area of the figure
      */
-    public abstract float getArea() throws figureException;
+    public abstract float getArea() throws FigureException;
 
     /**
      * Calculation of the perimeter of the figure
      */
-    public abstract float getPerimeter() throws figureException;
+    public abstract float getPerimeter() throws FigureException;
 }

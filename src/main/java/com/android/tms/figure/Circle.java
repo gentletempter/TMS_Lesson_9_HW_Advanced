@@ -1,6 +1,6 @@
 package com.android.tms.figure;
 
-import com.android.tms.exception.figureException;
+import com.android.tms.exception.FigureException;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
@@ -18,22 +18,22 @@ public class Circle extends Figure {
     }
 
     @Override
-    public float getArea() throws figureException {
+    public float getArea() throws FigureException {
         if (checkCircle(r)) {
             log.info("Calculating area");
             return (float) (Math.PI * r * r);
         } else {
-            throw new figureException(exceptionMessage, this.getClass().getSimpleName());
+            throw new FigureException(exceptionMessage, this.getClass().getSimpleName());
         }
     }
 
     @Override
-    public float getPerimeter() throws figureException {
+    public float getPerimeter() throws FigureException {
         if (checkCircle(r)) {
             log.info("Calculating perimeter");
             return (float) (2 * Math.PI * r);
         } else {
-            throw new figureException(exceptionMessage, this.getClass().getSimpleName());
+            throw new FigureException(exceptionMessage, this.getClass().getSimpleName());
         }
     }
 }
